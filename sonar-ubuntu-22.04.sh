@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Download the SonarQube installation script
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.3.1.45104.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip -O sonarqube.zip
 
 # Unzip the downloaded file
-unzip sonarqube-9.3.1.45104.zip -d /opt
+unzip sonarqube.zip -d /opt
 
 # Rename the extracted directory for convenience
-mv /opt/sonarqube-9.3.1.45104 /opt/sonarqube
+mv /opt/sonarqube-9.6.1.59531 /opt/sonarqube
 
 # Configure SonarQube to run as a service
 cat <<EOF > /etc/systemd/system/sonarqube.service
